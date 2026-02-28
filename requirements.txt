@@ -1,0 +1,7 @@
+streamlit
+pypdf
+edge-tts
+pdf2docx
+python-docx
+Pillow
+streamlit-option-menu
