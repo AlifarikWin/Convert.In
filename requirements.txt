@@ -9,3 +9,5 @@ docx2pdf
 pywin32
 PyMuPDF
 moviepy
+SpeechRecognition
+pydub
