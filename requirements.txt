@@ -5,8 +5,6 @@ pdf2docx
 python-docx
 Pillow
 streamlit-antd-components
-docx2pdf
-pywin32
 PyMuPDF
 moviepy
 SpeechRecognition
