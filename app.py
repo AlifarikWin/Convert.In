@@ -14,8 +14,10 @@ from pdf2docx import Converter
 import docx
 import streamlit_antd_components as sac
 import fitz 
-from moviepy import VideoFileClip
-
+try:
+    from moviepy.editor import VideoFileClip
+except ImportError:
+    from moviepy import VideoFileClip
 # --- 1. KONFIGURASI HALAMAN ---
 st.set_page_config(page_title="AIO Converter Pro", layout="wide")
 
@@ -254,5 +256,6 @@ with col_main:
                     doc.save(buf, garbage=4, deflate=True); pdf_bytes = buf.getvalue()
                     st.success("Kompresi PDF selesai."); preview_pdf(pdf_bytes)
                     st.download_button("UNDUH PDF", pdf_bytes, "AIO_Compressed.pdf")
+
 
         st.markdown('</div>', unsafe_allow_html=True)
